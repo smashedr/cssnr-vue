@@ -38,6 +38,7 @@ jobs:
       contents: read
     with:
       name: "preview"
+      # TODO: PATH: Change to / and remove path
       url: "https://dev-static.cssnr.com/cssnr-vue"
       path: "cssnr-vue"
       robots: true
