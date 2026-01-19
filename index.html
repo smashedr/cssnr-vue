@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>%VITE_TITLE%</title>
+
+    <meta name="author" content="Shane" />
+    <meta name="title" content="%VITE_TITLE%" />
+    <meta name="description" content="%VITE_DESCRIPTION%" />
+
+    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/src/assets/logo.png" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="%VITE_TITLE%" />
+    <meta property="og:site_name" content="%VITE_SUBTITLE%" />
+    <meta property="og:description" content="%VITE_DESCRIPTION%" />
+    <meta property="og:image" content="/src/assets/logo.png" />
+    <meta property="og:image:alt" content="%VITE_TITLE%" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="%VITE_TITLE%" />
+    <meta property="twitter:site" content="%VITE_SUBTITLE%" />
+    <meta property="twitter:description" content="%VITE_DESCRIPTION%" />
+    <meta property="twitter:image" content="/src/assets/logo.png" />
+    <meta property="twitter:image:alt" content="%VITE_TITLE%" />
+
+    <meta name="darkreader-lock" />
+
+    <script src="/theme.js"></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="app" class="d-flex h-100 flex-column"></div>
+    <script>
+      ;(function () {
+        const redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect)
+        }
+      })()
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* CSS for global */
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.toast-container {
+  max-width: 260px;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .nav-icons .nav-link {
+    padding-right: 7px;
+  }
+  .nav-icons .nav-item + .nav-item .nav-link {
+    padding-left: 7px;
+  }
+}
+
+@media (min-width: 576px) {
+  footer li + li::before {
+    content: '•';
+    margin-right: 0.3rem;
+  }
+}
+
+/* Grow */
+.hvr-grow-lg,
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s !important;
+  transition-property: transform !important;
+}
+
+.hvr-grow:hover {
+  transform: scale(1.1);
+}
+
+.hvr-grow-lg:hover {
+  transform: scale(1.2);
+}
+
+.heart:hover {
+  color: #ff6433 !important;
+}
+
+.discord:hover {
+  color: #7785cc !important;
+}
