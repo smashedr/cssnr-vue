@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+// import NotFound from '@/views/NotFound.vue'
 
 // https://router.vuejs.org/guide/
 const router = createRouter({
@@ -24,6 +25,14 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue'),
       meta: { name: 'About' },
+    },
+    // { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      redirect: () => {
+        return '/'
+      },
     },
   ],
 })

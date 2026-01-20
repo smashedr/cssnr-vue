@@ -37,8 +37,10 @@
     <script>
       ;(function () {
         const redirect = sessionStorage.redirect
+        console.log("INDEX - redirect:", redirect)
         delete sessionStorage.redirect
         if (redirect && redirect !== location.href) {
+          console.log("INDEX - history.replaceState:", redirect)
           history.replaceState(null, null, redirect)
         }
       })()

@@ -11,6 +11,7 @@
     "lint:check": "eslint . --cache",
     "prettier": "npx prettier --write .",
     "prettier:check": "npx prettier --check .",
+    "prepreview": "npm run build",
     "preview": "vite preview",
     "type-check": "vue-tsc --build"
   },
