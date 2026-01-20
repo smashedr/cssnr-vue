@@ -4,14 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run type-check && vite build",
+    "prebuild": "npm run type-check",
+    "build": "vite build",
     "build-only": "vite build",
     "dev": "vite",
     "lint": "eslint . --cache --fix",
     "lint:check": "eslint . --cache",
     "prettier": "npx prettier --write .",
     "prettier:check": "npx prettier --check .",
+    "prepreview": "npm run build",
     "preview": "vite preview",
+    "preview-only": "vite preview",
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
@@ -19,7 +22,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
-    "vue": "^3.5.26",
+    "vue": "^3.5.27",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
