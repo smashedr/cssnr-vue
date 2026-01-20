@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run type-check && vite build",
+    "prebuild": "npm run type-check",
+    "build": "vite build",
     "build-only": "vite build",
     "dev": "vite",
     "lint": "eslint . --cache --fix",
@@ -13,6 +14,7 @@
     "prettier:check": "npx prettier --check .",
     "prepreview": "npm run build",
     "preview": "vite preview",
+    "preview-only": "vite preview",
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
